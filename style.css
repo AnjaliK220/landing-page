@@ -1,0 +1,251 @@
+/* Custom Reset and Variables */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0f1319;
+    color: #ffffff;
+}
+
+span {
+    color: #3498db;
+}
+
+/* --- NAVBAR STYLING --- */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 0;
+    background-color: transparent;
+    z-index: 1000;
+    transition: all 0.4s ease;
+}
+
+.navbar.scrolled {
+    background-color: rgba(26, 34, 46, 0.95);
+    backdrop-filter: blur(10px); /* Premium blurry effect */
+    padding: 15px 0;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(52, 152, 219, 0.3);
+}
+
+.nav-container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #fff;
+    font-size: 26px;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+/* Hover and Active Effects */
+.nav-links a:hover, .nav-links a.active {
+    color: #fff;
+    background-color: #3498db;
+}
+
+/* Mobile Menu Toggle Button (Hidden on Desktop) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+/* --- HERO SECTION --- */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: radial-gradient(circle at top right, #1a2536 0%, #0f1319 100%);
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.hero-content p {
+    font-size: 19px;
+    color: #94a3b8;
+    max-width: 650px;
+    margin: 0 auto 35px auto;
+    line-height: 1.6;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    color: white;
+    padding: 14px 35px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4);
+    transition: transform 0.2s, background 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px);
+}
+
+/* --- SECTIONS COMMON STYLE --- */
+section {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+/* Underline effect below headings */
+section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #3498db;
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
+}
+
+.about-section { background-color: #141b25; }
+.about-section p { max-width: 800px; margin: 0 auto; line-height: 1.8; color: #94a3b8; font-size: 17px;}
+
+/* --- SERVICES CARD GRID --- */
+.services-section { background-color: #0f1319; }
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #141b25;
+    padding: 40px 30px;
+    border-radius: 12px;
+    border: 1px solid #1e293b;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: #3498db;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.card h3 { margin-bottom: 15px; color: #3498db; }
+.card p { color: #94a3b8; font-size: 15px; line-height: 1.5; }
+
+/* --- CONTACT FORM --- */
+.contact-section { background-color: #141b25; }
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 14px;
+    background-color: #0f1319;
+    border: 1px solid #1e293b;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.btn-submit {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-submit:hover { background-color: #27ae60; }
+
+/* --- RESPONSIVE MEDIA QUERY (FOR MOBILE DEVICES) --- */
+@media (max-width: 768px) {
+    .menu-toggle { display: flex; } /* Show burger menu icon */
+
+    .nav-links {
+        display: none; /* Hide menu initially on mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #141b25;
+        padding: 20px 0;
+        border-bottom: 2px solid #3498db;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show menu when burger icon clicked */
+    }
+
+    .hero-content h1 { font-size: 34px; }
+}

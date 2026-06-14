@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Responsive Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Creative<span>Anjali</span></a>
+            
+            <button class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" class="nav-item active">Home</a></li>
+                <li><a href="#about" class="nav-item">About</a></li>
+                <li><a href="#services" class="nav-item">Services</a></li>
+                <li><a href="#contact" class="nav-item">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1>Elevate Your <span>Digital Presence</span></h1>
+            <p>We craft high-performance, beautiful, and fully responsive websites tailored exactly to your needs.</p>
+            <a href="#about" class="btn-primary">Get Started</a>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>About Our Vision</h2>
+            <p>Innovation and responsiveness are at the heart of what we do. Scroll down to watch the navigation bar smoothly transform into a solid header—a perfect blend of JavaScript logic and CSS transitions.</p>
+        </div>
+    </section>
+
+    <section id="services" class="services-section">
+        <h2>Our Premium Services</h2>
+        <div class="services-grid">
+            <div class="card">
+                <h3>Web Design</h3>
+                <p>Creating beautiful, modern, and eye-catching user interfaces.</p>
+            </div>
+            <div class="card">
+                <h3>Development</h3>
+                <p>Writing clean, optimized, and fast-loading code for all platforms.</p>
+            </div>
+            <div class="card">
+                <h3>SEO Optimization</h3>
+                <p>Making sure your website ranks high on Google search results.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Get In Touch</h2>
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('Message Sent Successfully! 🎉');">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit" class="btn-submit">Send Message</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
