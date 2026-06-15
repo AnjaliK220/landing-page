@@ -1,4 +1,4 @@
-# 🌐 Premium Responsive Landing Page
+# Responsive Landing Page
 
 A modern, high-performance, and fully responsive single-page portfolio landing website. This project showcases dynamic UI layouts, smooth transition states, and full cross-device adaptation using vanilla HTML5, CSS3, and JavaScript.
 
